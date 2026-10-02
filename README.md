@@ -39,16 +39,14 @@ Structure" requirement:
 ```bash
 pip install -r requirements.txt
 
-# 1. (optional) regenerate the synthetic sample dataset (for testing only)
+# Optional: regenerate the synthetic test data
 python generate_sample_data.py
 
-# 2. run the pipeline against any daily CSV with the expected schema
-cd src
-python pipeline.py --input ../data/test_sample_daily_prices.csv --outdir ../output
+# Run against the synthetic data
+python src/pipeline.py --input data/test_sample_daily_prices.csv --outdir output
 
-# Run the pipeline on the assignment dataset
-cd src
-python pipeline.py --input ../data/tt_dataset.csv --outdir ../output
+# Run against the assignment dataset
+python src/pipeline.py --input data/tt_dataset.csv --outdir output
 ```
 
 This produces `result_AAPL.csv`, `result_AMD.csv`, … `result_TSLA.csv` in
