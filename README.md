@@ -1,8 +1,8 @@
 # Daily → Monthly Stock Data Pipeline
 
-A small, modular Pandas-only pipeline that turns daily OHLCV data for 10
-stock symbols into monthly summaries enriched with technical indicators,
-then partitions the result into one CSV per symbol.
+A modular Pandas-based pipeline that converts daily OHLCV stock data into monthly summaries, adds technical indicators, and writes one CSV per ticker.
+
+This project is designed to work with any valid daily stock dataset that follows the expected schema. For testing and local validation, a generated synthetic dataset is included. For the actual assignment, the required input is the provided dataset in the data folder.
 
 ## Project structure
 
@@ -44,7 +44,11 @@ python generate_sample_data.py
 
 # 2. run the pipeline against any daily CSV with the expected schema
 cd src
-python pipeline.py --input ../data/test_sample_daily_prices.csv --outdir ../output 
+python pipeline.py --input ../data/test_sample_daily_prices.csv --outdir ../output
+
+# Run the pipeline on the assignment dataset
+cd src
+python pipeline.py --input ../data/tt_dataset.csv --outdir ../output
 ```
 
 This produces `result_AAPL.csv`, `result_AMD.csv`, … `result_TSLA.csv` in
