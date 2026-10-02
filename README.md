@@ -137,14 +137,9 @@ change:
    spec is required.
 6. **"Exactly 24 rows" assumption.** This holds when the input covers
    exactly a 2-year span with at least one trading day in every calendar
-   month. If the real dataset has a gapped or partial month, that month
-   will simply be absent from the output rather than silently fabricated.
-7. **Sample dataset.** No real dataset was provided alongside the
-   assignment, so `generate_sample_data.py` produces a synthetic
-   business-day dataset for the 10 required tickers (2023-10-01 to
-   2025-09-30) purely so the pipeline is runnable and the `output/` folder
-   isn't empty. It is **not** real market data — swap in the actual CSV for
-   grading/production use.
+   month — true for the provided `tt_dataset.csv`. If a different dataset
+   has a gapped or partial month, that month will simply be absent from the
+   output rather than silently fabricated.
 
 ## References
 
