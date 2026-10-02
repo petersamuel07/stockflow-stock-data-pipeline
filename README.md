@@ -1,4 +1,4 @@
-# Daily → Monthly Stock Data Pipeline
+# STOCKFLOW Daily → Monthly Stock Data Pipeline
 
 A modular Pandas-based pipeline that converts daily OHLCV stock data into monthly summaries, adds technical indicators, and writes one CSV per ticker.
 
